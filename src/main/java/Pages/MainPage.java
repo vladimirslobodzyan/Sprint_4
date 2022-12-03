@@ -65,7 +65,7 @@ public class MainPage {
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         }
 
-    //Добавили метод, скролл до нидней кнопки заказать
+    //Добавили метод, скролл до нижней кнопки заказать
     public void scrollToOrderButton() {
         WebElement element = driver.findElement(orderDownButton);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
