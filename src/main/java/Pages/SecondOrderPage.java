@@ -62,7 +62,7 @@ public class SecondOrderPage {
         return orderText;
     }
     //Создаем шаг зполнение страницы 2
-    public void fillSecondPage(String dataFields, String commentField) {
+   public void fillSecondPage(String dataFields, String commentField) {
         setDateOrdier(dataFields);
         setOrderArrowTimeField();
         setOrderDropTimeField();

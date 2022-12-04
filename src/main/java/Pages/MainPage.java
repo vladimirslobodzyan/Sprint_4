@@ -65,72 +65,10 @@ public class MainPage {
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         }
 
-    //Добавили метод, скролл до нижней кнопки заказать
-    public void scrollToOrderButton() {
-        WebElement element = driver.findElement(orderDownButton);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-    }
-
-    //Добавили метод нажатия на первый вопрос
-    public void clickFirstAccordionBlock() {
-        driver.findElement(firstAccordionBlock).click();
-    }
-
-    //Добавили метод нажатия на второй  вопрос
-    public void clickSecondAccordionBlock() {
-        driver.findElement(secondAccordionBlock).click();
-    }
-
-    //Добавили метод нажатия на третий  вопрос
-    public void clickThirdAccordionBlock() {
-        driver.findElement(thirdAccordionBlock).click();
-    }
-
-    //Добавили метод нажатия на четвертый  вопрос
-    public void clickFofthAccordionBlock() {
-        driver.findElement(fofthAccordionBlock).click();
-    }
-
-    //Добавили метод нажатия на пятый  вопрос
-    public void clickFifthAccordionBlock() {
-        driver.findElement(fifthAccordionBlock).click();
-    }
-
-    //Добавили метод нажатия на шестой  вопрос
-    public void clickSixthAccordionBlock() {
-        driver.findElement(sixthAccordionBlock).click();
-    }
-
-    //Добавили метод нажатия на седьмой  вопрос
-    public void clickSeventhAccordionBlock() {
-        driver.findElement(seventhAccordionBlock).click();
-    }
-
-    //Добавили метод нажатия на восьмой  вопрос
-    public void clickEighthAccordionBlock() {
-        driver.findElement(eighthAccordionBlock).click();
-    }
-
     //Добавили метод получения текста ответа
     public String getOpenAnswerText() {
         String textElement = driver.findElement(openAnswerText).getText();
         return textElement;
     }
 
-    //Добавили метод нажатия на верхнюю кнопку Заказть
-    public void clickOrderUpButton() {
-        driver.findElement(orderUpButton).click();
-    }
-
-    //Добавили метод нажатия на нижнюю кнопку Заказть
-    public void clickOrderDownButton() {
-        driver.findElement(orderDownButton).click();
-    }
-
-    //Добавим шаг скролл и нажатие на нижнюю кнопку заказать
-    public void goToDownOrderButton() {
-        scrollToOrderButton();
-        clickOrderDownButton();
-
-    }
     }

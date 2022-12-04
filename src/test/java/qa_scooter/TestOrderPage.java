@@ -45,10 +45,10 @@ public class TestOrderPage {
     public static Object[][] getCostumersData() {
         return new Object[][] {
                 //Проверям каждое поле формы для Chrome и FireFox на допустимость внесения кирилицы и латиницы
-                { "//div/button[@class='Button_Button__ra12g']","Владимир", "Ианович", "Ломоносова 7", "Чистые пруды", "89001234567", "31.12.2022", "Хорошо"},
+               { "//div/button[@class='Button_Button__ra12g']","Владимир", "Ианович", "Ломоносова 7", "Чистые пруды", "89001234567", "31.12.2022", "Хорошо"},
                 { "//div/button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']","Владимир", "Ианович", "Ломоносова 7", "Чистые пруды", "89001234567", "31.12.2022", "Хорошо"},
                 // Проверка поля Имя
-                {  "//div/button[@class='Button_Button__ra12g']","Ivanov", "Сергей", "Московская 10", "Павелецкая", "+79001234567","31.12.2022", "Всем спасибо!"},
+               /* {  "//div/button[@class='Button_Button__ra12g']","Ivanov", "Сергей", "Московская 10", "Павелецкая", "+79001234567","31.12.2022", "Всем спасибо!"},
                 { "//div/button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']","Ivanov", "Сергей", "Московская 10", "Павелецкая", "+79001234567","31.12.2022", "Всем спасибо!"},
                 // Проверка поля Фамилия
                 { "//div/button[@class='Button_Button__ra12g']","Петя", "Fox", "Краснодарская ул.10", "Киевская", "0987654321", "31.12.2022", "спасибо" },
@@ -67,7 +67,7 @@ public class TestOrderPage {
                 {"//div/button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']","Алена", "Иванова", "Григорьева д.123 кв 34", "Третьяковская", "89001234567", "31.12.2021", "Оставить у двери" },
                 // Проверка поля Коментарий
                 { "//div/button[@class='Button_Button__ra12g']","Алена", "Иванова", "Григорьева д.123 кв 34", "Третьяковская", "89001234567", "31.12.2022", "Spasibo" },
-                { "//div/button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']", "Григорьева д.123 кв 34", "Третьяковская", "89001234567", "31.12.2022", "Spasibo" },
+                { "//div/button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']", "Григорьева д.123 кв 34", "Третьяковская", "89001234567", "31.12.2022", "Spasibo" },*/
         };
     }
 
@@ -90,9 +90,8 @@ public class TestOrderPage {
     public void testUpOrderButton ()  {
       // создать объект класса главной страницы
       MainPage objMainPage = new MainPage(driver);
-     // objMainPage.clickOrderUpButton();
+
       driver.findElement(By.xpath(orderButtonLocator)).click();
-      System.out.println(orderButtonLocator);
         // создать объект класса 2 страницы заказа;
        FirstOrderPage firstOrderPage = new FirstOrderPage(driver);
        // Заполнить форму 1
